@@ -18,3 +18,19 @@ code {
     box-sizing: border-box;
     outline: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+.app-container {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: none;
+}

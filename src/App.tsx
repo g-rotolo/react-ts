@@ -1,45 +1,17 @@
-import React, { useState } from 'react';
-import './App.css';
-import Autocomplete from './components/Autocomplete/Autocomplete';
+import React from 'react';
+import Form from './components/Form/Form';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
 
 function App() {
-    const [isLoading, setIsLoading] = useState(false);
-    const [options, setOptions] = useState<
-        | [
-              {
-                  id: string;
-                  name: string;
-              }
-          ]
-        | []
-    >([]);
-
-    const searchHandler = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-            setOptions([
-                {
-                    id: '1',
-                    name: 'OPTION 1',
-                },
-            ]);
-        }, 1000);
-    };
-
     return (
         <div className="App">
-            <header className="App-header">Welcome</header>
-            <Autocomplete
-                initialValue=""
-                loading={isLoading}
-                label="Autocomplete"
-                error=""
-                name="field"
-                startSearch={searchHandler}
-                handleOptionClick={params => console.log(params)}
-                results={options}
-            />
+            <Header />
+            <div className="app-container">
+                <Routes>
+                    <Route path="/" element={<Form />} />
+                </Routes>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,77 @@
+.dropdown-menu-container {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu {
+    color: #000;
+    overflow: auto;
+    z-index: 1;
+    width: 200px;
+    max-height: 350px;
+    right: 0;
+    top: 30px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+
+.dropdown-menu > .menu-element {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+}
+
+.dropdown-menu > .menu-element.new {
+    background-color: #edf2fa;
+}
+
+.dropdown-menu > .menu-element:hover {
+    background-color: #d1d5da;
+}
+
+.dropdown-menu > .menu-element:first-child {
+    cursor: default;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.dropdown-menu > .menu-element > a {
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-menu > .menu-element > p {
+    margin-left: 0px;
+}
+
+.dropdown-menu > .menu-element > button {
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    font: 400 15px Lato;
+    text-align: left;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown-menu > .menu-element.disabled {
+    cursor: default;
+}
+
+.red-counter {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 100px;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    color: #eee;
+}

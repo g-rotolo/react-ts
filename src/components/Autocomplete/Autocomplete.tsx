@@ -32,7 +32,6 @@ const Autocomplete = ({
     const [openMenu, setOpenMenu] = useState(false);
 
     const closeMenu = () => {
-        // setInputValue('');
         setOpenMenu(false);
         document.removeEventListener('click', closeMenu);
     };

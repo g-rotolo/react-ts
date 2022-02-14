@@ -1,0 +1,23 @@
+header {
+    height: 70px;
+    background-color: #20232a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.fixed-header > a {
+    color: #fff;
+}
+
+.login-btn {
+    color: #fff;
+}
